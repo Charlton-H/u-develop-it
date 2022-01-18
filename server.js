@@ -23,7 +23,7 @@ app.use((req, res) => {
 });
 
 // Start server after DB connection
-db.connection((err) => {
+db.connect((err) => {
   if (err) throw err;
   console.log("Database connected.");
   app.listen(PORT, () => {

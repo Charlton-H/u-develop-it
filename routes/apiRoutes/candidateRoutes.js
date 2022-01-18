@@ -47,7 +47,7 @@ router.get("/candidate/:id", (req, res) => {
 
 // Delete a candidate
 router.delete("/candidate/:id", (req, res) => {
-  const sql = `DELETE FROM candidates  WHERE id = ?`;
+  const sql = `DELETE FROM candidates WHERE id = ?`;
   const params = [req.params.id];
 
   db.query(sql, params, (err, result) => {
